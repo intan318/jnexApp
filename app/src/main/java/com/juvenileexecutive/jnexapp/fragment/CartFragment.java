@@ -1,4 +1,4 @@
-package com.juvenileexecutive.jnexapp.Fragment;
+package com.juvenileexecutive.jnexapp.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

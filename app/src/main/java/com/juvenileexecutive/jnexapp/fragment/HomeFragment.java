@@ -1,4 +1,4 @@
-package com.juvenileexecutive.jnexapp.Fragment;
+package com.juvenileexecutive.jnexapp.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +11,14 @@ import androidx.fragment.app.Fragment;
 
 import com.juvenileexecutive.jnexapp.R;
 
-public class AccountFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    private View AccountView;
+    private View HomeView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        AccountView = inflater.inflate(R.layout.fragment_account, container, false);
-        return AccountView;
+        HomeView = inflater.inflate(R.layout.fragment_home, container, false);
+        return HomeView;
     }
 }
