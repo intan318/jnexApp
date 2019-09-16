@@ -9,10 +9,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.juvenileexecutive.jnexapp.Fragment.AccountFragment;
-import com.juvenileexecutive.jnexapp.Fragment.CartFragment;
-import com.juvenileexecutive.jnexapp.Fragment.CategoryFragment;
-import com.juvenileexecutive.jnexapp.Fragment.HomeFragment;
+import com.juvenileexecutive.jnexapp.fragment.AccountFragment;
+import com.juvenileexecutive.jnexapp.fragment.CartFragment;
+import com.juvenileexecutive.jnexapp.fragment.CategoryFragment;
+import com.juvenileexecutive.jnexapp.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
