@@ -22,11 +22,16 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/white"
-        app:menu="@menu/items" >
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@drawable/bottom_nav_selector"
+        app:menu="@menu/items"
+        app:elevation="4dp"
+        >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
