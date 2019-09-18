@@ -45,8 +45,7 @@ public class RvCategoriesAdapter  extends RecyclerView.Adapter<RvCategoriesAdapt
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
-               // CategoryModel categoryModel = categoryList.get(position);
-                //context.startActivity(new Intent(context, .class));
+
             }
         });
     }

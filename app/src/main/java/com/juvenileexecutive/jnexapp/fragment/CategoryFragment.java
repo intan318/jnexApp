@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +28,9 @@ public class CategoryFragment extends Fragment {
     RvCategoriesAdapter adapter;
     Context context;
 
+    CardView cardViewJeProduction, cardViewJecollection, cardViewJeState, cardViewSchool, cardViewTechnoloJE, cardViewVindication;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -43,5 +47,8 @@ public class CategoryFragment extends Fragment {
         adapter = new RvCategoriesAdapter(getActivity(),categoryModels);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(adapter);
+
+
+
     }
 }

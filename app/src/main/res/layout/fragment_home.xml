@@ -21,14 +21,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:gravity="center"
-            android:text="@string/home"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
+            android:layout_height="?attr/actionBarSize"
+            android:src="@drawable/logojuvenile"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/home"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textColor="@color/black"/>-->
     </androidx.appcompat.widget.Toolbar>
 
     <technolifestyle.com.imageslider.FlipperLayout
