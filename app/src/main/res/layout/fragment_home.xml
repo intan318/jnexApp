@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
 
         <ImageView
             android:layout_width="match_parent"
@@ -34,6 +35,15 @@
             <!--android:text="@string/home"-->
             <!--android:textSize="24sp"-->
             <!--android:textColor="@color/black"/>-->
+
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/home"-->
+            <!--android:fontFamily="@font/Rubik-Regular"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textColor="@color/black"/>-->
+
     </androidx.appcompat.widget.Toolbar>
 
     <technolifestyle.com.imageslider.FlipperLayout
