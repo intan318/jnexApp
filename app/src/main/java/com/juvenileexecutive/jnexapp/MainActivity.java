@@ -10,9 +10,10 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.juvenileexecutive.jnexapp.fragment.AccountFragment;
-import com.juvenileexecutive.jnexapp.fragment.CartFragment;
+import com.juvenileexecutive.jnexapp.fragment.MemberFragment;
 import com.juvenileexecutive.jnexapp.fragment.CategoryFragment;
 import com.juvenileexecutive.jnexapp.fragment.HomeFragment;
+import com.juvenileexecutive.jnexapp.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,14 +25,16 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav;
         final HomeFragment homeFragment;
         final CategoryFragment categoryFragment;
-        final CartFragment cartFragment;
+        final MemberFragment memberFragment;
         final AccountFragment accountFragment;
+        final SearchFragment searchFragment;
 
         bottomNav = findViewById(R.id.bottomNav);
         homeFragment = new HomeFragment();
         categoryFragment = new CategoryFragment();
-        cartFragment = new CartFragment();
+        memberFragment = new MemberFragment();
         accountFragment = new AccountFragment();
+        searchFragment = new SearchFragment();
 
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -45,11 +48,14 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(categoryFragment);
                         break;
 
-                    case R.id.btnCart:
-                        setFragment(cartFragment);
+                    case R.id.btnSearch:
+                        setFragment(searchFragment);
+                        break;
+                    case R.id.btnMember:
+                        setFragment(memberFragment);
                         break;
 
-                    case R.id.btnAccount:
+                    case R.id.btnMenu:
                         setFragment(accountFragment);
                         break;
                 }

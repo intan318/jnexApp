@@ -4,22 +4,24 @@
     <item
         android:id="@+id/btnHome"
         android:icon="@drawable/ic_home_new"
-        android:title="@string/home"
+        android:title="@string/home" />
 
-        />
+    <item
+        android:id="@+id/btnMember"
+        android:icon="@drawable/ic_member"
+        android:title="@string/member"/>
 
+    <item
+        android:id="@+id/btnSearch"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"/>
     <item
         android:id="@+id/btnCategory"
         android:icon="@drawable/ictiless"
-        android:title="@string/categories"/>
+        android:title="@string/je_world"/>
 
     <item
-        android:id="@+id/btnCart"
-        android:icon="@drawable/ic_cart"
-        android:title="@string/cart"/>
-
-    <item
-        android:id="@+id/btnAccount"
-        android:icon="@drawable/ic_accountrounded"
-        android:title="@string/account"/>
+        android:id="@+id/btnMenu"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/menu"/>
 </menu>
