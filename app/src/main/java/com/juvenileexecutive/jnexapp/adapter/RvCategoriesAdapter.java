@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.SubCategoryActivity;
 import com.juvenileexecutive.jnexapp.model.CategoryModel;
 
 import java.util.List;
@@ -45,7 +46,8 @@ public class RvCategoriesAdapter  extends RecyclerView.Adapter<RvCategoriesAdapt
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(context, SubCategoryActivity.class);
+                context.startActivity(intent);
             }
         });
     }

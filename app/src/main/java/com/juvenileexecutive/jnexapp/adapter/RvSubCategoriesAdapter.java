@@ -1,0 +1,78 @@
+package com.juvenileexecutive.jnexapp.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
+
+import java.util.List;
+
+public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategoriesAdapter.ViewHolder> {
+
+    Context context;
+    List<SubCategoryModel> subCategoryModels;
+
+    public RvSubCategoriesAdapter(Context context, List<SubCategoryModel> subCategoryModels) {
+        this.context = context;
+        this.subCategoryModels = subCategoryModels;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_subcategory,parent,false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Glide.with(context)
+                .load(subCategoryModels.get(position).getImageSubCategory())
+                .into(holder.imageSubCategory);
+
+        Glide.with(context)
+                .load(subCategoryModels.get(position).getImageProductsSubCateory1())
+                .into(holder.imageProductSubCategory1);
+
+        Glide.with(context)
+                .load(subCategoryModels.get(position).getImageProductsSubCateory2())
+                .into(holder.getImageProductSubCategory2);
+
+        holder.imageSubCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return subCategoryModels.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageSubCategory;
+        ImageView imageProductSubCategory1;
+        ImageView getImageProductSubCategory2;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            imageSubCategory = itemView.findViewById(R.id.iv_subcategory);
+            imageProductSubCategory1 = itemView.findViewById(R.id.iv_subcategory_product);
+            getImageProductSubCategory2 = itemView.findViewById(R.id.iv_subcategory_product2);
+        }
+    }
+}
