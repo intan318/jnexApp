@@ -16,4 +16,5 @@
     <string name="password">Password</string>
     <string name="sign_in">SIGN IN</string>
     <string name="about_account">About Account</string>
+    <string name="search">Search</string>
 </resources>

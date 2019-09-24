@@ -32,5 +32,9 @@ dependencies {
     implementation 'com.github.therealshabi:AutoImageFlipper:v1.4.1'
     implementation 'com.android.support:design'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+//    search bar
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 }
