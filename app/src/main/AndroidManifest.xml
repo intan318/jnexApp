@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".PaymentActivity">
-        </activity>
+        <activity android:name=".JEProductionActivity"></activity>
+        <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".SubCategoryActivity" />
         <activity android:name=".SignInActivity" />
