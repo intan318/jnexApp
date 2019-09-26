@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/actionBarCart"
@@ -16,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:fontFamily="@font/rubik_light"
+            android:fontFamily="@font/rubik_medium"
             android:text="Cart"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -28,13 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/actionBarCart"
-        android:padding="12dp">
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_item_payment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_height="wrap_content">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -47,20 +52,20 @@
             android:fontFamily="@font/rubik_medium"
             android:text="Total Payment"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/rv_item_payment"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="96dp"
-            android:layout_marginTop="8dp"
-            android:layout_toEndOf="@+id/txtTotal"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/rubik_regular"
             android:text="Rp7,000,000"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="18sp"
             />
 
         <TextView
@@ -68,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Payment Methods"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:fontFamily="@font/rubik_medium"
             android:textColor="@color/black"
             android:layout_below="@+id/txtTotal"
@@ -80,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtPaymentMethods"
-            android:padding="4dp"
+            android:padding="2dp"
             >
 
             <RadioButton
@@ -88,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/midtrans"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:fontFamily="@font/rubik_regular"
                 android:textStyle="italic"
                 />
@@ -98,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/credit_card"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:fontFamily="@font/rubik_regular"
                 android:textStyle="italic"
                 android:layout_marginTop="4dp"
@@ -109,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/paypal"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:fontFamily="@font/rubik_regular"
                 android:textStyle="italic"
                 android:layout_marginTop="4dp"
@@ -120,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bank_transfer"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:fontFamily="@font/rubik_regular"
                 android:textStyle="italic"
                 android:layout_marginTop="4dp"
@@ -143,4 +148,7 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>
