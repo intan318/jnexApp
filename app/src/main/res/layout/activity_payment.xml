@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionBarCart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/txtSubCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/rubik_light"
+            android:text="Cart"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionBarCart"
+        android:padding="12dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_item_payment"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Total Payment"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_item_payment"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/txtTotal"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Rp7,000,000"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            />
+
+        <TextView
+            android:id="@+id/txtPaymentMethods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Methods"
+            android:textSize="22sp"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/black"
+            android:layout_below="@+id/txtTotal"
+            android:layout_marginTop="16dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/rgPaymentMethods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPaymentMethods"
+            android:padding="4dp"
+            >
+
+            <RadioButton
+                android:id="@+id/txtMidtrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/midtrans"
+                android:textSize="22sp"
+                android:fontFamily="@font/rubik_regular"
+                android:textStyle="italic"
+                />
+
+            <RadioButton
+                android:id="@+id/txtCreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_card"
+                android:textSize="22sp"
+                android:fontFamily="@font/rubik_regular"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                />
+
+            <RadioButton
+                android:id="@+id/txtPaypal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paypal"
+                android:textSize="22sp"
+                android:fontFamily="@font/rubik_regular"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                />
+
+            <RadioButton
+                android:id="@+id/txtBankTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_transfer"
+                android:textSize="22sp"
+                android:fontFamily="@font/rubik_regular"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/txtOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            android:layout_below="@+id/rgPaymentMethods"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_roundedcorner"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

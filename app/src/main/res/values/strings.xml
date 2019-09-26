@@ -16,4 +16,9 @@
     <string name="password">Password</string>
     <string name="sign_in">SIGN IN</string>
     <string name="about_account">About Account</string>
+    <string name="midtrans">Midtrans</string>
+    <string name="bank_transfer">Bank Transfer</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="paypal">Paypal</string>
+    <string name="order">Order</string>
 </resources>
