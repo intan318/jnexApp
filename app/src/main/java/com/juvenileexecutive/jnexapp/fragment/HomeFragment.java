@@ -89,9 +89,11 @@ public class HomeFragment extends Fragment {
 
     }
 
+
+
     private void setLayoutSlider() {
         Integer images [] = new Integer[]{
-          R.drawable.slider1, R.drawable.slider002, R.drawable.slideerr3
+          R.drawable.slider01, R.drawable.slider2, R.drawable.slider3
         };
 
         for(int i=0;i<3;i++){

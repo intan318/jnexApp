@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.ProductsModel;
 
@@ -34,10 +35,10 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-//        Glide.with(context)
-//                .load(imageAge.get(position))
-//                .into(holder.image);
-     //   holder.txtProduct.setText(productsList.get(position).getProductTitle());
+        Glide.with(holder.itemView.getContext())
+                .load(productsList.get(position).getProductImage())
+                .into(holder.imageProduct);
+     //  holder.txtProduct.setText(productsList.get(position).getProductTitle());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

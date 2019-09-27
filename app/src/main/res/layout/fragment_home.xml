@@ -44,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@android:color/black">
 
         </technolifestyle.com.imageslider.FlipperLayout>
 

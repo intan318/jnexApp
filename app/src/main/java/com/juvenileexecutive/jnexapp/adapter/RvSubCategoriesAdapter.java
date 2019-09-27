@@ -36,15 +36,15 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Glide.with(context)
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageSubCategory())
                 .into(holder.imageSubCategory);
 
-        Glide.with(context)
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageProductsSubCateory1())
                 .into(holder.imageProductSubCategory1);
 
-        Glide.with(context)
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageProductsSubCateory2())
                 .into(holder.getImageProductSubCategory2);
 
