@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.juvenileexecutive.jnexapp.adapter.RvItemCart;
+import com.juvenileexecutive.jnexapp.adapter.RvItemCartAdapter;
 import com.juvenileexecutive.jnexapp.model.DataItemCart;
 import com.juvenileexecutive.jnexapp.model.ItemCartModel;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class PaymentActivity extends AppCompatActivity {
 
     List<ItemCartModel> itemCartModels;
-    RvItemCart itemCartAdapter;
+    RvItemCartAdapter itemCartAdapter;
     RecyclerView recyclerViewItemCart;
 
     @Override
@@ -25,7 +25,7 @@ public class PaymentActivity extends AppCompatActivity {
 
         recyclerViewItemCart = findViewById(R.id.rv_item_payment);
         itemCartModels = DataItemCart.generateData();
-        itemCartAdapter = new RvItemCart(this, itemCartModels);
+        itemCartAdapter = new RvItemCartAdapter(this, itemCartModels);
         recyclerViewItemCart.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewItemCart.setAdapter(itemCartAdapter);
     }

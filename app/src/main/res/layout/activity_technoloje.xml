@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/rubik_medium"
-                android:text="@string/jeproduction"
+                android:text="@string/technoloje"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -38,7 +38,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_item_jeproduction"
+                android:id="@+id/rv_item_technoloje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

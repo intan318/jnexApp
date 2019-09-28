@@ -16,29 +16,27 @@ import com.juvenileexecutive.jnexapp.DetailActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
-public class RvItemProduct extends RecyclerView.Adapter<RvItemProduct.ViewHolder> {
+public class RvItemProductAdapter extends RecyclerView.Adapter<RvItemProductAdapter.ViewHolder> {
 
     Context context;
     List<ItemDetailModel> itemDetailModels;
 
-    public RvItemProduct(Context context, List<ItemDetailModel> itemDetailModels) {
+    public RvItemProductAdapter(Context context, List<ItemDetailModel> itemDetailModels) {
         this.context = context;
         this.itemDetailModels = itemDetailModels;
     }
 
     @NonNull
     @Override
-    public RvItemProduct.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RvItemProductAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item_jepro, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RvItemProduct.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull RvItemProductAdapter.ViewHolder holder, final int position) {
 
         holder.namaItem.setText(itemDetailModels.get(position).getItemNameDetail());
         Glide.with(context)

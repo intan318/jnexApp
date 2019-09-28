@@ -16,12 +16,12 @@ import com.juvenileexecutive.jnexapp.model.ItemCartModel;
 
 import java.util.List;
 
-public class RvItemCart extends RecyclerView.Adapter<RvItemCart.ViewHolder> {
+public class RvItemCartAdapter extends RecyclerView.Adapter<RvItemCartAdapter.ViewHolder> {
 
     Context context;
     List<ItemCartModel> itemCarts;
 
-    public RvItemCart(Context context, List<ItemCartModel> itemCarts) {
+    public RvItemCartAdapter(Context context, List<ItemCartModel> itemCarts) {
         this.context = context;
         this.itemCarts = itemCarts;
     }
