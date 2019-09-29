@@ -1,5 +1,6 @@
 package com.juvenileexecutive.jnexapp.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.juvenileexecutive.jnexapp.JEProductionActivity;
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.SubCategoryActivity;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
 
 import java.util.List;
@@ -48,11 +51,12 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
                 .load(subCategoryModels.get(position).getImageProductsSubCateory2())
                 .into(holder.getImageProductSubCategory2);
 
-        holder.imageSubCategory.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(context, JEProductionActivity.class);
+                context.startActivity(intent);
             }
         });
     }

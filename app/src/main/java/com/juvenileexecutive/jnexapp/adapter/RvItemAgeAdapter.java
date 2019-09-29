@@ -12,20 +12,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.model.AgeModel;
+import com.juvenileexecutive.jnexapp.model.ProductsModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.ViewHolder> {
 
-    private ArrayList<String> titleAge = new ArrayList<>();
-    private ArrayList<String> imageAge = new ArrayList<>();
+
+    List<AgeModel> ageList;
     private Context context;
 
 
-    public RvItemAgeAdapter(Context context, ArrayList<String> titleAge, ArrayList<String> imageAge) {
-        this.titleAge = titleAge;
-        this.imageAge = imageAge;
+    public RvItemAgeAdapter(Context context,List<AgeModel> ageList) {
         this.context = context;
+        this.ageList = ageList;
     }
 
     @NonNull
@@ -38,10 +40,10 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-//        Glide.with(context)
-//                .load(imageAge.get(position))
-//                .into(holder.image);
-         //  holder.title.setText(titleAge.get(position));
+        Glide.with(holder.itemView.getContext())
+                .load(ageList.get(position).getImageAge())
+                .into(holder.image);
+           //holder.title.setText(titleAge.get(position));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +55,7 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
 
     @Override
     public int getItemCount() {
-        return titleAge.size();
+        return ageList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

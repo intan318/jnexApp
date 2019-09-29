@@ -23,11 +23,16 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <technolifestyle.com.imageslider.FlipperLayout
-        android:id="@+id/flipper_search"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="356dp">
-    </technolifestyle.com.imageslider.FlipperLayout>
+        android:layout_height="350dp"
+        android:background="@drawable/ic_launcher_background"/>
+
+    <!--<technolifestyle.com.imageslider.FlipperLayout-->
+        <!--android:id="@+id/flipper_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="356dp">-->
+    <!--</technolifestyle.com.imageslider.FlipperLayout>-->
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"

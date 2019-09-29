@@ -58,13 +58,13 @@ public class SearchFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        flipperLayout = view.findViewById(R.id.flipper_search);
-        setLayoutSlider();
+//        flipperLayout = view.findViewById(R.id.flipper_search);
+//        setLayoutSlider();
     }
 
     private void setLayoutSlider() {
         Integer img [] = new Integer[]{
-                R.drawable.slider1, R.drawable.slider002, R.drawable.ic_launcher_background
+                R.drawable.slider01, R.drawable.slider02, R.drawable.slider3
         };
 
         for(int i=0; i<3; i++){

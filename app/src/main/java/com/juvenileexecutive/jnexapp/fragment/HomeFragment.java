@@ -23,7 +23,9 @@ import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.adapter.RvCategoriesAdapter;
 import com.juvenileexecutive.jnexapp.adapter.RvItemAgeAdapter;
 import com.juvenileexecutive.jnexapp.adapter.RvProductsAdapter;
+import com.juvenileexecutive.jnexapp.model.AgeModel;
 import com.juvenileexecutive.jnexapp.model.CategoryModel;
+import com.juvenileexecutive.jnexapp.model.DataAge;
 import com.juvenileexecutive.jnexapp.model.DataCategory;
 import com.juvenileexecutive.jnexapp.model.DataProducts;
 import com.juvenileexecutive.jnexapp.model.ProductsModel;
@@ -40,7 +42,7 @@ public class HomeFragment extends Fragment {
     FlipperLayout flipper;
     Context context;
     List<ProductsModel> productsModelList;
-
+    List<AgeModel> ageModelList;
 
     private ArrayList<String> mTitleAge = new ArrayList<>();
     private ArrayList<String> mImageAge = new ArrayList<>();
@@ -66,14 +68,15 @@ public class HomeFragment extends Fragment {
 
         Log.d(TAG, "initRecyclerView: init recyclerview");
 
-        getItemLayoutAge();
+       // getItemLayoutAge();
 
 
         // setup recyclerview for age button
         LinearLayoutManager layoutManagerAge = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false);
         RecyclerView recyclerViewAge = view.findViewById(R.id.rv_age);
+        ageModelList = DataAge.generateDataAge();
         recyclerViewAge.setLayoutManager(layoutManagerAge);
-        RvItemAgeAdapter ageAdapter = new RvItemAgeAdapter(context, mTitleAge, mImageAge);
+        RvItemAgeAdapter ageAdapter = new RvItemAgeAdapter(context, ageModelList);
         recyclerViewAge.setAdapter(ageAdapter);
 
 

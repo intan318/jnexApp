@@ -10,38 +10,36 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.model.AgeModel;
-import com.juvenileexecutive.jnexapp.model.InfoAccountModel;
+import com.juvenileexecutive.jnexapp.model.AssistenMenuModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class RvInfoAccount extends RecyclerView.Adapter<RvInfoAccount.ViewHolder> {
-
-    List<InfoAccountModel> infoAccountModelsList;
+public class RvAssitenAdapter extends RecyclerView.Adapter<RvAssitenAdapter.ViewHolder> {
+    List<AssistenMenuModel> assistenMenuModelList;
     private Context context;
 
-    public RvInfoAccount(Context context, List<InfoAccountModel> infoAccountModelsList) {
-        this.infoAccountModelsList = infoAccountModelsList;
+    public RvAssitenAdapter( Context context,List<AssistenMenuModel> assistenMenuModelList) {
+        this.assistenMenuModelList = assistenMenuModelList;
         this.context = context;
     }
 
+
+
     @NonNull
     @Override
-    public RvInfoAccount.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RvInfoAccount.ViewHolder holder, int position) {
-        holder.labelInfo.setText(infoAccountModelsList.get(position).getTitleAccount());
-
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.labelInfo.setText(assistenMenuModelList.get(position).getTitleAsisten());
     }
 
     @Override
     public int getItemCount() {
-        return infoAccountModelsList.size();
+        return assistenMenuModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
