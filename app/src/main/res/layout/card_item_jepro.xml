@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imgItem"
+        android:id="@+id/imgItemJePro"
         android:layout_width="match_parent"
         android:layout_height="168dp"
         android:src="@drawable/ic_launcher_background"
@@ -32,7 +32,7 @@
         android:text="Nama Item"
         android:textSize="20sp"
         android:fontFamily="@font/rubik_medium"
-        android:layout_below="@id/imgItem"
+        android:layout_below="@id/imgItemJePro"
         android:textColor="@color/black"
         />
 

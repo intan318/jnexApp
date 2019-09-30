@@ -16,7 +16,7 @@
         android:padding="12dp">
 
         <ImageView
-            android:id="@+id/imgItem"
+            android:id="@+id/imgItemCheckout"
             android:layout_width="80dp"
             android:layout_height="80dp"
 
@@ -38,7 +38,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imgItem"
+            app:layout_constraintStart_toEndOf="@+id/imgItemCheckout"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView

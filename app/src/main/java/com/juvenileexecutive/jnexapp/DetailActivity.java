@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView detailNamaItem;
     TextView detailDescItem;
     ImageView detailImgItem;
+    Button detailButtonRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +26,9 @@ public class DetailActivity extends AppCompatActivity {
         initData();
 
         Intent i = getIntent();
-        String detNamaItem = i.getStringExtra("namaitem");
-        String detDescItem = i.getStringExtra("descitem");
-        String detImgItem = i.getStringExtra("imgitem");
+        final String detNamaItem = i.getStringExtra("namaitem");
+        final String detDescItem = i.getStringExtra("descitem");
+        final String detImgItem = i.getStringExtra("imgitem");
 
         detailNamaItem.setText(detNamaItem);
         detailDescItem.setText(detDescItem);
@@ -33,11 +36,24 @@ public class DetailActivity extends AppCompatActivity {
                 .load(detImgItem)
                 .into(detailImgItem);
 
+        detailButtonRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(DetailActivity.this, PaymentActivity.class);
+                i.putExtra("namaitem", detNamaItem);
+                i.putExtra("descitem", detDescItem);
+                i.putExtra("imgitem", detImgItem);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void initData() {
         detailNamaItem = findViewById(R.id.txtNamaItemDetail);
         detailDescItem = findViewById(R.id.txtDescItemDetail);
         detailImgItem = findViewById(R.id.imgItemDetail);
+        detailButtonRequest = findViewById(R.id.btnItemRequest);
     }
 }

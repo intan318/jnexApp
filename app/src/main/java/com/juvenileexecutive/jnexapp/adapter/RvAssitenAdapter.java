@@ -22,9 +22,6 @@ public class RvAssitenAdapter extends RecyclerView.Adapter<RvAssitenAdapter.View
         this.assistenMenuModelList = assistenMenuModelList;
         this.context = context;
     }
-
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

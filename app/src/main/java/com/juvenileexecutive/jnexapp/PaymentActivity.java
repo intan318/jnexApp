@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.juvenileexecutive.jnexapp.adapter.RvItemCart;
 import com.juvenileexecutive.jnexapp.model.DataItemCart;
@@ -18,10 +20,13 @@ public class PaymentActivity extends AppCompatActivity {
     RvItemCart itemCartAdapter;
     RecyclerView recyclerViewItemCart;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+
 
         recyclerViewItemCart = findViewById(R.id.rv_item_payment);
         itemCartModels = DataItemCart.generateData();
@@ -29,4 +34,8 @@ public class PaymentActivity extends AppCompatActivity {
         recyclerViewItemCart.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewItemCart.setAdapter(itemCartAdapter);
     }
+
+
+
+
 }

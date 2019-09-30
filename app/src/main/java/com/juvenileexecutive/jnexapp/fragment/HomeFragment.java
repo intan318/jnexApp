@@ -61,8 +61,6 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         flipper = view.findViewById(R.id.flipper);
         setLayoutSlider();
-
-
         Toolbar myToolbar = (Toolbar) view.findViewById(R.id.my_toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(myToolbar);
 
@@ -96,13 +94,13 @@ public class HomeFragment extends Fragment {
 
     private void setLayoutSlider() {
         Integer images [] = new Integer[]{
-          R.drawable.slider01, R.drawable.slider2, R.drawable.slider3
+          R.drawable.slider01, R.drawable.slider0002, R.drawable.slider0003
         };
 
         for(int i=0;i<3;i++){
             FlipperView view = new FlipperView(getContext());
             view.setImageDrawable(images[i])
-            .setImageScaleType(ImageView.ScaleType.CENTER_CROP);
+            .setImageScaleType(ImageView.ScaleType.FIT_XY);
                   //  .setDescription("Image"+(i+1));
             flipper.addFlipperView(view);
             view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {

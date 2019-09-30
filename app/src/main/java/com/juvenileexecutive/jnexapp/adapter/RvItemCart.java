@@ -1,6 +1,8 @@
 package com.juvenileexecutive.jnexapp.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,12 +45,22 @@ public class RvItemCart extends RecyclerView.Adapter<RvItemCart.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.itemName.setText(itemCarts.get(position).getItemName());
+
+        Intent i = ((Activity) context).getIntent();
+
+        holder.itemName.setText(i.getStringExtra("namaitem"));
+
+        //holder.itemName.setText(itemCarts.get(position).getItemName());
         Glide.with(context)
-                .load(itemCarts.get(position).getImgItem())
+                .load( i.getStringExtra("imgitem"))
                 .into(holder.imgItem);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
     }
 
     @Override
@@ -64,7 +76,7 @@ public class RvItemCart extends RecyclerView.Adapter<RvItemCart.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemName = itemView.findViewById(R.id.txtItemName);
-            imgItem = itemView.findViewById(R.id.imgItem);
+            imgItem = itemView.findViewById(R.id.imgItemCheckout);
         }
     }
 
