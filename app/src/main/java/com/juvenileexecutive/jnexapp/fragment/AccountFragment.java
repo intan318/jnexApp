@@ -97,42 +97,8 @@ public class AccountFragment  extends Fragment {
         RvSettingMenuAdapter settingAdapter = new RvSettingMenuAdapter(context,settingMenuModelList);
         recyclerViewSetting.setAdapter(settingAdapter);
         settingAdapter.notifyDataSetChanged();
-//        RecyclerView recyclerViewSettings = view.findViewById(R.id.rv_settings );
-//        recyclerViewSettings.setLayoutManager(new LinearLayoutManager(context));
-//        RvInfoAccount settingAdapter = new RvInfoAccount(context,mSettings);
-//        recyclerViewSettings.setAdapter(settingAdapter);
-//        settingAdapter.notifyDataSetChanged();
-
 
     }
 
-    private void setLayoutInfo() {
-        mTitleInfo.add("About Account");
-        mTitleInfo.add("Members");
-        mTitleInfo.add("Profile");
-        mTitleInfo.add("Business Center");
-        mTitleInfo.add("Device Request");
-        mTitleInfo.add("GO LIVE");
 
-
-        mAssistants.add("Chat With JUVENA");
-        mAssistants.add("Groups");
-        mAssistants.add("Forums");
-        mAssistants.add("Marketplace");
-        mAssistants.add("Events");
-
-        mPersonal.add("Chat with ANGELINE");
-        mPersonal.add("Chat with JESSICA");
-        mPersonal.add("Chat with JENIVER");
-        mPersonal.add("Chat with RECEPTIONIST");
-
-        mSettings.add("Password");
-        mSettings.add("Members");
-        mSettings.add("Profile");
-        mSettings.add("Privacy");
-        mSettings.add("Localization");
-
-
-
-    }
 }

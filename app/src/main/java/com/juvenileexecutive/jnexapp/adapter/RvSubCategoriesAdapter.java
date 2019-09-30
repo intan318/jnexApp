@@ -1,13 +1,11 @@
 package com.juvenileexecutive.jnexapp.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.JEProductionActivity;
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.SubCategoryActivity;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
 
 import java.util.List;
@@ -24,6 +21,7 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
 
     Context context;
     List<SubCategoryModel> subCategoryModels;
+
 
     public RvSubCategoriesAdapter(Context context, List<SubCategoryModel> subCategoryModels) {
         this.context = context;
@@ -38,7 +36,7 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageSubCategory())
                 .into(holder.imageSubCategory);
@@ -54,8 +52,12 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(context, JEProductionActivity.class);
+
+                //Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
+              //  SubCategoryModel subCategory = subCategoryModels.get(position);
+                Intent intent = new Intent(context,JEProductionActivity.class);
+              //  intent.putExtra("title_subcategory",subCategory.getImageSubCategory());
+
                 context.startActivity(intent);
             }
         });

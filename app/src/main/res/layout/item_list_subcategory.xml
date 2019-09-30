@@ -45,10 +45,11 @@
             android:layout_weight="1">
 
             <ImageView
+                android:layout_gravity="center"
                 android:id="@+id/iv_subcategory_product"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="center"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/ic_launcher_background"/>
             
         </androidx.cardview.widget.CardView>
@@ -63,10 +64,11 @@
             app:cardUseCompatPadding="true">
 
             <ImageView
+                android:layout_gravity="center"
                 android:id="@+id/iv_subcategory_product2"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="center"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/ic_launcher_background" />
         </androidx.cardview.widget.CardView>
 
