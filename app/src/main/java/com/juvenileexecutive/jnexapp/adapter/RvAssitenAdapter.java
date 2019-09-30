@@ -18,14 +18,15 @@ public class RvAssitenAdapter extends RecyclerView.Adapter<RvAssitenAdapter.View
     List<AssistenMenuModel> assistenMenuModelList;
     private Context context;
 
-    public RvAssitenAdapter( Context context,List<AssistenMenuModel> assistenMenuModelList) {
+    public RvAssitenAdapter(Context context, List<AssistenMenuModel> assistenMenuModelList) {
         this.assistenMenuModelList = assistenMenuModelList;
         this.context = context;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account, parent, false);
         return new ViewHolder(view);
     }
 
@@ -41,6 +42,7 @@ public class RvAssitenAdapter extends RecyclerView.Adapter<RvAssitenAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView labelInfo;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             labelInfo = itemView.findViewById(R.id.tv_info_account);

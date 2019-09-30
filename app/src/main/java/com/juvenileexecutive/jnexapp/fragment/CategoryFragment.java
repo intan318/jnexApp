@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,11 +21,11 @@ import java.util.List;
 
 public class CategoryFragment extends Fragment {
 
-    private View CategoryView;
     RecyclerView recyclerView;
     List<CategoryModel> categoryModels;
     RvCategoriesAdapter adapter;
     Context context;
+    private View CategoryView;
 
     @Nullable
     @Override
@@ -41,10 +40,9 @@ public class CategoryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.recyclerView_categories);
         categoryModels = DataCategory.generateData();
-        adapter = new RvCategoriesAdapter(getActivity(),categoryModels);
+        adapter = new RvCategoriesAdapter(getActivity(), categoryModels);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(adapter);
-
 
 
     }

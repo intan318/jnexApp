@@ -9,6 +9,12 @@ public class CategoryModel {
     public CategoryModel() {
     }
 
+    public CategoryModel(String title, String description, int image) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -30,12 +36,6 @@ public class CategoryModel {
     }
 
     public void setImage(int image) {
-        this.image = image;
-    }
-
-    public CategoryModel(String title, String description, int image) {
-        this.title = title;
-        this.description = description;
         this.image = image;
     }
 }

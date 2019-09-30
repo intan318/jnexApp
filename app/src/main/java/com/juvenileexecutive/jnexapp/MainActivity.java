@@ -1,18 +1,18 @@
 package com.juvenileexecutive.jnexapp;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.juvenileexecutive.jnexapp.fragment.AccountFragment;
-import com.juvenileexecutive.jnexapp.fragment.MemberFragment;
 import com.juvenileexecutive.jnexapp.fragment.CategoryFragment;
 import com.juvenileexecutive.jnexapp.fragment.HomeFragment;
+import com.juvenileexecutive.jnexapp.fragment.MemberFragment;
 import com.juvenileexecutive.jnexapp.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.btnHome:
                         setFragment(homeFragment);
                         break;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setSelectedItemId(R.id.btnHome);
     }
 
-    private void setFragment(Fragment fragment){
+    private void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();

@@ -28,7 +28,7 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_products, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_products, parent, false);
         return new ViewHolder(view);
     }
 
@@ -38,7 +38,7 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
         Glide.with(holder.itemView.getContext())
                 .load(productsList.get(position).getProductImage())
                 .into(holder.imageProduct);
-     //  holder.txtProduct.setText(productsList.get(position).getProductTitle());
+        //  holder.txtProduct.setText(productsList.get(position).getProductTitle());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
             super(itemView);
 
             imageProduct = itemView.findViewById(R.id.iv_product_image);
-           // txtProduct = itemView.findViewById(R.id.txt_desc_product);
+            // txtProduct = itemView.findViewById(R.id.txt_desc_product);
         }
     }
 }

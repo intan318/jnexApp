@@ -10,13 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.model.InfoAccountModel;
 import com.juvenileexecutive.jnexapp.model.SettingMenuModel;
 
 import java.util.List;
 
 public class RvSettingMenuAdapter extends RecyclerView.Adapter<RvSettingMenuAdapter.ViewHolder> {
-   Context context;
+    Context context;
     List<SettingMenuModel> settingModelsList;
 
     public RvSettingMenuAdapter(Context context, List<SettingMenuModel> settingModelsList) {
@@ -27,7 +26,7 @@ public class RvSettingMenuAdapter extends RecyclerView.Adapter<RvSettingMenuAdap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account, parent, false);
         return new ViewHolder(view);
     }
 
@@ -43,6 +42,7 @@ public class RvSettingMenuAdapter extends RecyclerView.Adapter<RvSettingMenuAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView labelInfo;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             labelInfo = itemView.findViewById(R.id.tv_info_account);

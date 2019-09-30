@@ -30,21 +30,18 @@ import com.juvenileexecutive.jnexapp.model.SettingMenuModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountFragment  extends Fragment {
-
-    private ArrayList<String> mTitleInfo = new ArrayList<>();
-    private ArrayList<String> mAssistants = new ArrayList<>();
-    private ArrayList<String> mPersonal = new ArrayList<>();
-    private ArrayList<String> mSettings = new ArrayList<>();
-    private View AccountView;
+public class AccountFragment extends Fragment {
 
     List<InfoAccountModel> infoAccountModelsList;
     List<AssistenMenuModel> assistenMenuModelList;
     List<PersonalMenuModel> personalMenuModelList;
     List<SettingMenuModel> settingMenuModelList;
-
     Context context;
-
+    private ArrayList<String> mTitleInfo = new ArrayList<>();
+    private ArrayList<String> mAssistants = new ArrayList<>();
+    private ArrayList<String> mPersonal = new ArrayList<>();
+    private ArrayList<String> mSettings = new ArrayList<>();
+    private View AccountView;
     private ListPreference mListPreference;
 
 
@@ -61,7 +58,6 @@ public class AccountFragment  extends Fragment {
     }
 
 
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -70,7 +66,7 @@ public class AccountFragment  extends Fragment {
         RecyclerView recyclerInfoAccount = view.findViewById(R.id.rv_info_account);
         recyclerInfoAccount.setLayoutManager(new LinearLayoutManager(context));
         infoAccountModelsList = DataInfoAccount.generateDataInfoAccount();
-        RvInfoAccount infoAdapter = new RvInfoAccount(context,infoAccountModelsList);
+        RvInfoAccount infoAdapter = new RvInfoAccount(context, infoAccountModelsList);
         recyclerInfoAccount.setAdapter(infoAdapter);
         infoAdapter.notifyDataSetChanged();
 
@@ -78,21 +74,21 @@ public class AccountFragment  extends Fragment {
         RecyclerView recyclerAssiten = view.findViewById(R.id.rv_asistants);
         recyclerAssiten.setLayoutManager(new LinearLayoutManager(context));
         assistenMenuModelList = DataAsisten.generateDataAsisten();
-        RvAssitenAdapter asistenAdapter = new RvAssitenAdapter(context,assistenMenuModelList);
+        RvAssitenAdapter asistenAdapter = new RvAssitenAdapter(context, assistenMenuModelList);
         recyclerAssiten.setAdapter(asistenAdapter);
         asistenAdapter.notifyDataSetChanged();
 
         RecyclerView recyclerViewPersonal = view.findViewById(R.id.rv_personal);
         recyclerViewPersonal.setLayoutManager(new LinearLayoutManager(context));
         personalMenuModelList = DataPersonalMenu.generateDataPersonal();
-        RvPersonalMenuAdapter personalAdapter = new RvPersonalMenuAdapter(context,personalMenuModelList);
+        RvPersonalMenuAdapter personalAdapter = new RvPersonalMenuAdapter(context, personalMenuModelList);
         recyclerViewPersonal.setAdapter(personalAdapter);
         personalAdapter.notifyDataSetChanged();
 
         RecyclerView recyclerViewSetting = view.findViewById(R.id.rv_settings);
         recyclerViewSetting.setLayoutManager(new LinearLayoutManager(context));
         settingMenuModelList = DataSettingMenu.generateDataSetting();
-        RvSettingMenuAdapter settingAdapter = new RvSettingMenuAdapter(context,settingMenuModelList);
+        RvSettingMenuAdapter settingAdapter = new RvSettingMenuAdapter(context, settingMenuModelList);
         recyclerViewSetting.setAdapter(settingAdapter);
         settingAdapter.notifyDataSetChanged();
 

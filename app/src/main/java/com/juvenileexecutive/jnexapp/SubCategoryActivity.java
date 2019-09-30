@@ -1,14 +1,12 @@
 package com.juvenileexecutive.jnexapp;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
-import com.juvenileexecutive.jnexapp.adapter.RvCategoriesAdapter;
 import com.juvenileexecutive.jnexapp.adapter.RvSubCategoriesAdapter;
-import com.juvenileexecutive.jnexapp.model.DataCategory;
 import com.juvenileexecutive.jnexapp.model.DataSubCategory;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
 
@@ -27,7 +25,7 @@ public class SubCategoryActivity extends AppCompatActivity {
 
         recyclerViewSubCategories = findViewById(R.id.rv_subcategories);
         subCategoryModels = DataSubCategory.generateDataSubCategory();
-        subCategoriesAdapter = new RvSubCategoriesAdapter(this,subCategoryModels);
+        subCategoriesAdapter = new RvSubCategoriesAdapter(this, subCategoryModels);
         recyclerViewSubCategories.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewSubCategories.setAdapter(subCategoriesAdapter);
 

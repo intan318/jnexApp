@@ -16,8 +16,6 @@ import com.juvenileexecutive.jnexapp.DetailActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class RvItemProduct extends RecyclerView.Adapter<RvItemProduct.ViewHolder> {

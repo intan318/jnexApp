@@ -31,7 +31,7 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_subcategory,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_subcategory, parent, false);
         return new ViewHolder(view);
     }
 
@@ -54,9 +54,9 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
             public void onClick(View view) {
 
                 //Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
-              //  SubCategoryModel subCategory = subCategoryModels.get(position);
-                Intent intent = new Intent(context,JEProductionActivity.class);
-              //  intent.putExtra("title_subcategory",subCategory.getImageSubCategory());
+                //  SubCategoryModel subCategory = subCategoryModels.get(position);
+                Intent intent = new Intent(context, JEProductionActivity.class);
+                //  intent.putExtra("title_subcategory",subCategory.getImageSubCategory());
 
                 context.startActivity(intent);
             }

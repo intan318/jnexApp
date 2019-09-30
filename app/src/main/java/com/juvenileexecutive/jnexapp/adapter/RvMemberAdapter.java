@@ -17,8 +17,9 @@ import com.juvenileexecutive.jnexapp.model.MemberModel;
 import java.util.List;
 
 public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHolder> {
-   Context context;
-   List<MemberModel> memberList;
+    Context context;
+    List<MemberModel> memberList;
+
     public RvMemberAdapter(Context context, List<MemberModel> memberList) {
         this.context = context;
         this.memberList = memberList;
@@ -27,7 +28,7 @@ public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_member,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_member, parent, false);
         return new ViewHolder(view);
     }
 

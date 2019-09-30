@@ -18,7 +18,7 @@ import com.juvenileexecutive.jnexapp.model.CategoryModel;
 
 import java.util.List;
 
-public class RvCategoriesAdapter  extends RecyclerView.Adapter<RvCategoriesAdapter.ViewHolder> {
+public class RvCategoriesAdapter extends RecyclerView.Adapter<RvCategoriesAdapter.ViewHolder> {
     Context context;
     List<CategoryModel> categoryList;
 
@@ -31,7 +31,7 @@ public class RvCategoriesAdapter  extends RecyclerView.Adapter<RvCategoriesAdapt
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_categories,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_categories, parent, false);
         return new ViewHolder(view);
     }
 
@@ -59,6 +59,7 @@ public class RvCategoriesAdapter  extends RecyclerView.Adapter<RvCategoriesAdapt
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image_category);

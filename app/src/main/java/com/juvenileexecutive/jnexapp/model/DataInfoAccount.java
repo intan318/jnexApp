@@ -3,7 +3,7 @@ package com.juvenileexecutive.jnexapp.model;
 import java.util.ArrayList;
 
 public class DataInfoAccount {
-    public static ArrayList<InfoAccountModel> generateDataInfoAccount(){
+    public static ArrayList<InfoAccountModel> generateDataInfoAccount() {
         ArrayList<InfoAccountModel> accountItems = new ArrayList<>();
 
         accountItems.add(new InfoAccountModel("About Account"));

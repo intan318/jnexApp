@@ -5,7 +5,7 @@ import com.juvenileexecutive.jnexapp.R;
 import java.util.ArrayList;
 
 public class DataAge {
-    public static ArrayList<AgeModel> generateDataAge(){
+    public static ArrayList<AgeModel> generateDataAge() {
         ArrayList<AgeModel> ageItems = new ArrayList<>();
 
         ageItems.add(new AgeModel("title1", R.mipmap.ic_launcher));

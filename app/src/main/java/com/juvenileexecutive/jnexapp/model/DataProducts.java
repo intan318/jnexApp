@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DataProducts {
 
-    public static ArrayList<ProductsModel> generateDataProduct(){
+    public static ArrayList<ProductsModel> generateDataProduct() {
         ArrayList<ProductsModel> productItems = new ArrayList<>();
 
         productItems.add(new ProductsModel("title1", "description", R.drawable.find_solution));

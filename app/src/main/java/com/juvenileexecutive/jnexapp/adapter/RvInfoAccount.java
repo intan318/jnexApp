@@ -10,10 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.model.AgeModel;
 import com.juvenileexecutive.jnexapp.model.InfoAccountModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RvInfoAccount extends RecyclerView.Adapter<RvInfoAccount.ViewHolder> {
@@ -29,7 +27,7 @@ public class RvInfoAccount extends RecyclerView.Adapter<RvInfoAccount.ViewHolder
     @NonNull
     @Override
     public RvInfoAccount.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_info_account, parent, false);
         return new ViewHolder(view);
     }
 
@@ -46,6 +44,7 @@ public class RvInfoAccount extends RecyclerView.Adapter<RvInfoAccount.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView labelInfo;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             labelInfo = itemView.findViewById(R.id.tv_info_account);

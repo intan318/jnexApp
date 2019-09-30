@@ -52,7 +52,7 @@ public class RvItemCart extends RecyclerView.Adapter<RvItemCart.ViewHolder> {
 
         //holder.itemName.setText(itemCarts.get(position).getItemName());
         Glide.with(context)
-                .load( i.getStringExtra("imgitem"))
+                .load(i.getStringExtra("imgitem"))
                 .into(holder.imgItem);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,7 @@ public class RvItemCart extends RecyclerView.Adapter<RvItemCart.ViewHolder> {
         return itemCarts.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView itemName;
         ImageView imgItem;

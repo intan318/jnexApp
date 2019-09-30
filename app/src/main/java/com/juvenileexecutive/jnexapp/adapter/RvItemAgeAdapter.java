@@ -13,9 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.AgeModel;
-import com.juvenileexecutive.jnexapp.model.ProductsModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.ViewHolder> {
@@ -25,7 +23,7 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
     private Context context;
 
 
-    public RvItemAgeAdapter(Context context,List<AgeModel> ageList) {
+    public RvItemAgeAdapter(Context context, List<AgeModel> ageList) {
         this.context = context;
         this.ageList = ageList;
     }
@@ -33,7 +31,7 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_age,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_age, parent, false);
         return new ViewHolder(view);
     }
 
@@ -43,7 +41,7 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
         Glide.with(holder.itemView.getContext())
                 .load(ageList.get(position).getImageAge())
                 .into(holder.image);
-           //holder.title.setText(titleAge.get(position));
+        //holder.title.setText(titleAge.get(position));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,9 +59,10 @@ public class RvItemAgeAdapter extends RecyclerView.Adapter<RvItemAgeAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView image;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-           // title = itemView.findViewById(R.id.txt_desc_age);
+            // title = itemView.findViewById(R.id.txt_desc_age);
             image = itemView.findViewById(R.id.iv_card_age);
         }
     }

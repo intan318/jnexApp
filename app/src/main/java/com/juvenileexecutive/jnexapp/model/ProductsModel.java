@@ -9,6 +9,12 @@ public class ProductsModel {
     }
 
 
+    public ProductsModel(String productTitle, String productDescription, int productImage) {
+        this.productTitle = productTitle;
+        this.productDescription = productDescription;
+        this.productImage = productImage;
+    }
+
     public String getProductTitle() {
         return productTitle;
     }
@@ -30,12 +36,6 @@ public class ProductsModel {
     }
 
     public void setProductImage(int productImage) {
-        this.productImage = productImage;
-    }
-
-    public ProductsModel(String productTitle, String productDescription, int productImage) {
-        this.productTitle = productTitle;
-        this.productDescription = productDescription;
         this.productImage = productImage;
     }
 }

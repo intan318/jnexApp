@@ -2,12 +2,11 @@ package com.juvenileexecutive.jnexapp.model;
 
 import com.juvenileexecutive.jnexapp.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class DataItemDetail {
 
-    public static ArrayList<ItemDetailModel> generateData(){
+    public static ArrayList<ItemDetailModel> generateData() {
         ArrayList<ItemDetailModel> detailItems = new ArrayList<>();
 
         detailItems.add(new ItemDetailModel(
