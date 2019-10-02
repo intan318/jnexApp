@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.juvenileexecutive.jnexapp.DetailActivity;
+import com.juvenileexecutive.jnexapp.activity.DetailActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 

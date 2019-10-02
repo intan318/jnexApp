@@ -17,12 +17,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvItemAgeAdapter;
-import com.juvenileexecutive.jnexapp.adapter.RvProductsAdapter;
-import com.juvenileexecutive.jnexapp.model.AgeModel;
-import com.juvenileexecutive.jnexapp.model.DataAge;
-import com.juvenileexecutive.jnexapp.model.DataProducts;
-import com.juvenileexecutive.jnexapp.model.ProductsModel;
+import com.juvenileexecutive.jnexapp.home.adapter.RvItemAgeAdapter;
+import com.juvenileexecutive.jnexapp.home.adapter.RvProductsAdapter;
+import com.juvenileexecutive.jnexapp.home.model.AgeModel;
+import com.juvenileexecutive.jnexapp.home.data.DataAge;
+import com.juvenileexecutive.jnexapp.home.data.DataProducts;
+import com.juvenileexecutive.jnexapp.home.model.ProductsModel;
 
 import java.util.ArrayList;
 import java.util.List;

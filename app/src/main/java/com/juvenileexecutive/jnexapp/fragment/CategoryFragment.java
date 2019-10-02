@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvCategoriesAdapter;
-import com.juvenileexecutive.jnexapp.model.CategoryModel;
-import com.juvenileexecutive.jnexapp.model.DataCategory;
+import com.juvenileexecutive.jnexapp.category.adapter.RvCategoriesAdapter;
+import com.juvenileexecutive.jnexapp.category.model.CategoryModel;
+import com.juvenileexecutive.jnexapp.category.data.DataCategory;
 
 import java.util.List;
 

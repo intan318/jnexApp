@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.juvenileexecutive.jnexapp.JEProductionActivity;
+import com.juvenileexecutive.jnexapp.activity.JEProductionActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
 
