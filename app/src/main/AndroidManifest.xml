@@ -13,12 +13,18 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".JEProductionActivity" />
-        <activity android:name=".PaymentActivity" />
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".SubCategoryActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".JEProductionActivity"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".PaymentActivity"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".DetailActivity"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".SubCategoryActivity"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".SignInActivity"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation = "portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

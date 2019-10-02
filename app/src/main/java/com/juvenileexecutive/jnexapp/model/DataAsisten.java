@@ -7,7 +7,7 @@ public class DataAsisten {
     public static ArrayList<AssistenMenuModel> generateDataAsisten() {
         ArrayList<AssistenMenuModel> asistenItems = new ArrayList<>();
 
-        asistenItems.add(new AssistenMenuModel("Chat with Juvenna"));
+        asistenItems.add(new AssistenMenuModel("Chat with JUVENNA"));
         asistenItems.add(new AssistenMenuModel("Groups"));
         asistenItems.add(new AssistenMenuModel("Forums"));
         asistenItems.add(new AssistenMenuModel("Marketplace"));

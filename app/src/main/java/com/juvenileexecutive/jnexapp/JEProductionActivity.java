@@ -3,6 +3,7 @@ package com.juvenileexecutive.jnexapp;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,7 +27,7 @@ public class JEProductionActivity extends AppCompatActivity {
         recyclerViewJEPro = findViewById(R.id.rv_item_payment);
         itemDetailModels = DataItemDetail.generateData();
         itemProductAdapter = new RvItemProduct(this, itemDetailModels);
-        recyclerViewJEPro.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewJEPro.setLayoutManager(new GridLayoutManager(this,2));
         recyclerViewJEPro.setAdapter(itemProductAdapter);
 
 
