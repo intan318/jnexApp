@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imgItemJePro"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/rubik_medium"
             android:text="Nama Item"
