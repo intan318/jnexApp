@@ -9,10 +9,10 @@ public class DataCategory {
     public static ArrayList<CategoryModel> generateData() {
         ArrayList<CategoryModel> categoryItems = new ArrayList<>();
 
-        categoryItems.add(new CategoryModel("JE Group", " ", R.drawable.background1));
-        categoryItems.add(new CategoryModel("JEvestment", " ", R.drawable.background2));
-        categoryItems.add(new CategoryModel("JExpansion", " ", R.drawable.background1));
-        categoryItems.add(new CategoryModel("C.H.I.L.D", " ", R.drawable.background2));
+        categoryItems.add(new CategoryModel("JE Group", " ", R.drawable.category_onestop));
+        categoryItems.add(new CategoryModel("JEvestment", " ", R.drawable.category_businessexp));
+        categoryItems.add(new CategoryModel("JExpansion", " ", R.drawable.category_investment));
+        categoryItems.add(new CategoryModel("C.H.I.L.D", " ", R.drawable.category_child));
         return categoryItems;
     }
 }
