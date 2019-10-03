@@ -7,9 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
-
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,13 +17,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvCategoriesAdapter;
-import com.juvenileexecutive.jnexapp.adapter.RvItemAgeAdapter;
-import com.juvenileexecutive.jnexapp.adapter.RvProductsAdapter;
-import com.juvenileexecutive.jnexapp.model.CategoryModel;
-import com.juvenileexecutive.jnexapp.model.DataCategory;
-import com.juvenileexecutive.jnexapp.model.DataProducts;
-import com.juvenileexecutive.jnexapp.model.ProductsModel;
+import com.juvenileexecutive.jnexapp.home.adapter.RvItemAgeAdapter;
+import com.juvenileexecutive.jnexapp.home.adapter.RvProductsAdapter;
+import com.juvenileexecutive.jnexapp.home.model.AgeModel;
+import com.juvenileexecutive.jnexapp.home.data.DataAge;
+import com.juvenileexecutive.jnexapp.home.data.DataProducts;
+import com.juvenileexecutive.jnexapp.home.model.ProductsModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +36,7 @@ public class HomeFragment extends Fragment {
     FlipperLayout flipper;
     Context context;
     List<ProductsModel> productsModelList;
-
+    List<AgeModel> ageModelList;
 
     private ArrayList<String> mTitleAge = new ArrayList<>();
     private ArrayList<String> mImageAge = new ArrayList<>();
@@ -59,51 +55,50 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         flipper = view.findViewById(R.id.flipper);
         setLayoutSlider();
-
-
-        Toolbar myToolbar = (Toolbar) view.findViewById(R.id.my_toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(myToolbar);
+        Toolbar myToolbar = view.findViewById(R.id.my_toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(myToolbar);
 
         Log.d(TAG, "initRecyclerView: init recyclerview");
 
-        getItemLayoutAge();
+        // getItemLayoutAge();
 
 
         // setup recyclerview for age button
-        LinearLayoutManager layoutManagerAge = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager layoutManagerAge = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView recyclerViewAge = view.findViewById(R.id.rv_age);
+        ageModelList = DataAge.generateDataAge();
         recyclerViewAge.setLayoutManager(layoutManagerAge);
-        RvItemAgeAdapter ageAdapter = new RvItemAgeAdapter(context, mTitleAge, mImageAge);
+        RvItemAgeAdapter ageAdapter = new RvItemAgeAdapter(context, ageModelList);
         recyclerViewAge.setAdapter(ageAdapter);
 
 
         //setup recyclerview for products
-        LinearLayoutManager layoutManagerProduts = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager layoutManagerProduts = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView recyclerViewProducts = view.findViewById(R.id.rv_products);
         productsModelList = DataProducts.generateDataProduct();
         recyclerViewProducts.setLayoutManager(layoutManagerProduts);
-        RvProductsAdapter productsAdapter = new RvProductsAdapter(context,productsModelList);
+        RvProductsAdapter productsAdapter = new RvProductsAdapter(context, productsModelList);
         recyclerViewProducts.setAdapter(productsAdapter);
-
 
 
     }
 
+
     private void setLayoutSlider() {
-        Integer images [] = new Integer[]{
-          R.drawable.slider1, R.drawable.slider002, R.drawable.slideerr3
+        Integer[] images = new Integer[]{
+                R.drawable.slider0001, R.drawable.slider0002, R.drawable.slider0003
         };
 
-        for(int i=0;i<3;i++){
+        for (int i = 0; i < 3; i++) {
             FlipperView view = new FlipperView(getContext());
             view.setImageDrawable(images[i])
-            .setImageScaleType(ImageView.ScaleType.CENTER_CROP);
-                  //  .setDescription("Image"+(i+1));
+                    .setImageScaleType(ImageView.ScaleType.FIT_XY);
+            //  .setDescription("Image"+(i+1));
             flipper.addFlipperView(view);
             view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
                 @Override
                 public void onFlipperClick(FlipperView flipperView) {
-                  //  Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
                 }
             });
 

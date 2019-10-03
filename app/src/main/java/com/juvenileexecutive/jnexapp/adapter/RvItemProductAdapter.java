@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.juvenileexecutive.jnexapp.DetailActivity;
+import com.juvenileexecutive.jnexapp.activity.DetailActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
@@ -73,9 +73,9 @@ public class RvItemProductAdapter extends RecyclerView.Adapter<RvItemProductAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            namaItem = itemView.findViewById(R.id.txtItemName);
+            namaItem = itemView.findViewById(R.id.txtNamaItem);
 //            descItem = itemView.findViewById(R.id.txtDescItemDetail);
-            imgItem = itemView.findViewById(R.id.imgItem);
+            imgItem = itemView.findViewById(R.id.imgItemJePro);
         }
     }
 }

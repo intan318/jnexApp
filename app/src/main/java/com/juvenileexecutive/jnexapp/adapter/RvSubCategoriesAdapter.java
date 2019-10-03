@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.juvenileexecutive.jnexapp.activity.JEProductionActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
 
@@ -22,6 +22,7 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
     Context context;
     List<SubCategoryModel> subCategoryModels;
 
+
     public RvSubCategoriesAdapter(Context context, List<SubCategoryModel> subCategoryModels) {
         this.context = context;
         this.subCategoryModels = subCategoryModels;
@@ -30,29 +31,34 @@ public class RvSubCategoriesAdapter extends RecyclerView.Adapter<RvSubCategories
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_subcategory,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_subcategory, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Glide.with(context)
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageSubCategory())
                 .into(holder.imageSubCategory);
 
-        Glide.with(context)
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageProductsSubCateory1())
                 .into(holder.imageProductSubCategory1);
 
-        Glide.with(context)
+        Glide.with(holder.itemView.getContext())
                 .load(subCategoryModels.get(position).getImageProductsSubCateory2())
                 .into(holder.getImageProductSubCategory2);
 
-        holder.imageSubCategory.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
 
+                //Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
+                //  SubCategoryModel subCategory = subCategoryModels.get(position);
+                Intent intent = new Intent(context, JEProductionActivity.class);
+                //  intent.putExtra("title_subcategory",subCategory.getImageSubCategory());
+
+                context.startActivity(intent);
             }
         });
     }

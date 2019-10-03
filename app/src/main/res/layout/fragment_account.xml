@@ -41,14 +41,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-        android:layout_marginBottom="24dp">
+        >
 
 
         <LinearLayout
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="100dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -126,7 +127,10 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
+
+
         </LinearLayout>
+
 
 
 

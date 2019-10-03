@@ -13,22 +13,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvCategoriesAdapter;
-import com.juvenileexecutive.jnexapp.adapter.RvMemberAdapter;
-import com.juvenileexecutive.jnexapp.model.CategoryModel;
-import com.juvenileexecutive.jnexapp.model.DataCategory;
-import com.juvenileexecutive.jnexapp.model.DataMember;
-import com.juvenileexecutive.jnexapp.model.MemberModel;
+import com.juvenileexecutive.jnexapp.member.adapter.RvMemberAdapter;
+import com.juvenileexecutive.jnexapp.member.data.DataMember;
+import com.juvenileexecutive.jnexapp.member.model.MemberModel;
 
 import java.util.List;
 
 public class MemberFragment extends Fragment {
 
-    private View memberView;
     RecyclerView recyclerViewMember;
     List<MemberModel> memberModels;
     RvMemberAdapter adapter;
     Context context;
+    private View memberView;
 
     @Nullable
     @Override
@@ -41,8 +38,8 @@ public class MemberFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewMember = view.findViewById(R.id.rv_member);
-        memberModels= DataMember.generateDataMember();
-        adapter = new RvMemberAdapter(getActivity(),memberModels);
+        memberModels = DataMember.generateDataMember();
+        adapter = new RvMemberAdapter(getActivity(), memberModels);
         recyclerViewMember.setLayoutManager(new LinearLayoutManager(context));
         recyclerViewMember.setAdapter(adapter);
     }

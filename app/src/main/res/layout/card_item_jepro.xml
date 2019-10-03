@@ -6,34 +6,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="8dp"
     app:cardElevation="2dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    android:padding="8dp"
+    android:layout_weight="1"
+    app:cardUseCompatPadding="true"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="4dp"
+    style="@style/CardView.Light">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        >
 
     <ImageView
-        android:id="@+id/imgItem"
+        android:id="@+id/imgItemJePro"
         android:layout_width="match_parent"
-        android:layout_height="168dp"
+        android:layout_height="140dp"
         android:src="@drawable/ic_launcher_background"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
         android:scaleType="fitXY"
         />
 
-    <TextView
-        android:id="@+id/txtNamaItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Nama Item"
-        android:textSize="20sp"
-        android:fontFamily="@font/rubik_medium"
-        android:layout_below="@id/imgItem"
-        android:textColor="@color/black"
+        <TextView
+            android:id="@+id/txtNamaItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgItemJePro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Nama Item"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
         />
 
     </RelativeLayout>

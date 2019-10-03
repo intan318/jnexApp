@@ -5,29 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintBottom_toTopOf="@+id/scrollViewHome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:src="@drawable/logojuvenile"
-            tools:ignore="ContentDescription" />
-
-    </androidx.appcompat.widget.Toolbar>
 
 <androidx.core.widget.NestedScrollView
-    app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+    app:layout_constraintTop_toTopOf="parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/scrollViewHome">
@@ -42,9 +23,10 @@
         <technolifestyle.com.imageslider.FlipperLayout
             android:id="@+id/flipper"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="220dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@android:color/black">
 
         </technolifestyle.com.imageslider.FlipperLayout>
 
@@ -71,12 +53,19 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_products"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="100dp">
+            android:layout_marginBottom="50dp">
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
