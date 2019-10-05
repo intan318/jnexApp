@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvItemProduct;
+import com.juvenileexecutive.jnexapp.adapter.RvItemProductAdapter;
 import com.juvenileexecutive.jnexapp.model.DataItemDetail;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
@@ -18,7 +18,7 @@ public class JEProductionActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewJEPro;
     List<ItemDetailModel> itemDetailModels;
-    RvItemProduct itemProductAdapter;
+    RvItemProductAdapter itemProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class JEProductionActivity extends AppCompatActivity {
 
         recyclerViewJEPro = findViewById(R.id.rv_item_payment);
         itemDetailModels = DataItemDetail.generateData();
-        itemProductAdapter = new RvItemProduct(this, itemDetailModels);
+        itemProductAdapter = new RvItemProductAdapter(this, itemDetailModels);
         recyclerViewJEPro.setLayoutManager(new GridLayoutManager(this,2));
         recyclerViewJEPro.setAdapter(itemProductAdapter);
 

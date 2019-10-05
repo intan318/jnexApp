@@ -8,7 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.adapter.RvItemProduct;
+import com.juvenileexecutive.jnexapp.adapter.RvItemProductAdapter;
 import com.juvenileexecutive.jnexapp.adapter.RvProductsActivityAdapter;
 import com.juvenileexecutive.jnexapp.model.DataItemDetail;
 import com.juvenileexecutive.jnexapp.model.DataProductActivity;
