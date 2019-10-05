@@ -10,12 +10,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".activity.FeaturedProductActivity">
-
-        </activity>
+        <activity android:name=".VendorsProducts"></activity>
+        <activity android:name=".activity.FeaturedProductActivity"></activity>
         <activity
             android:name=".ProductActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings" />
@@ -42,7 +41,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
