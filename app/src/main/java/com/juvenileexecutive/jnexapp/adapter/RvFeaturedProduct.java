@@ -1,6 +1,7 @@
 package com.juvenileexecutive.jnexapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.juvenileexecutive.jnexapp.ProductActivity;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.model.FeaturedProductModel;
 
@@ -41,6 +43,16 @@ public class RvFeaturedProduct extends RecyclerView.Adapter<RvFeaturedProduct.Vi
                 .into(holder.imgProducts);
         holder.titleProduct.setText(featuredProductModels.get(position).getTitleFeatured());
         holder.priceProduct.setText(featuredProductModels.get(position).getPriceFeatured());
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ProductActivity.class);
+
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

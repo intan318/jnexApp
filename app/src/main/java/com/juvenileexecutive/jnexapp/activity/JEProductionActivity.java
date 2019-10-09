@@ -25,7 +25,7 @@ public class JEProductionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeproduction);
 
-        recyclerViewJEPro = findViewById(R.id.rv_item_payment);
+        recyclerViewJEPro = findViewById(R.id.rv_item_jeproduction);
         itemDetailModels = DataItemDetail.generateData();
         itemProductAdapter = new RvItemProductAdapter(this, itemDetailModels);
         recyclerViewJEPro.setLayoutManager(new GridLayoutManager(this,2));

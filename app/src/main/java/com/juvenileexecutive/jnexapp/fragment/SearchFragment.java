@@ -60,23 +60,23 @@ public class SearchFragment extends Fragment {
 //        setLayoutSlider();
     }
 
-    private void setLayoutSlider() {
-        Integer[] img = new Integer[]{
-                R.drawable.slider01, R.drawable.slider02, R.drawable.slider3
-        };
-
-        for (int i = 0; i < 3; i++) {
-            FlipperView view = new FlipperView(getContext());
-            view.setImageDrawable(img[i])
-                    .setImageScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            flipperLayout.addFlipperView(view);
-            view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
-                @Override
-                public void onFlipperClick(FlipperView flipperView) {
-
-                }
-            });
-        }
-    }
+//    private void setLayoutSlider() {
+//        Integer[] img = new Integer[]{
+//                R.drawable.slider01, R.drawable.slider02, R.drawable.slider3
+//        };
+//
+//        for (int i = 0; i < 3; i++) {
+//            FlipperView view = new FlipperView(getContext());
+//            view.setImageDrawable(img[i])
+//                    .setImageScaleType(ImageView.ScaleType.CENTER_CROP);
+//
+//            flipperLayout.addFlipperView(view);
+//            view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
+//                @Override
+//                public void onFlipperClick(FlipperView flipperView) {
+//
+//                }
+//            });
+//        }
+//    }
 }

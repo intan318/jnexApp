@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.ProductActivity;
+import com.juvenileexecutive.jnexapp.activity.FeaturedProductActivity;
 import com.juvenileexecutive.jnexapp.home.model.ProductsModel;
 
 import java.util.List;
@@ -45,7 +46,7 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ProductActivity.class);
+                Intent intent = new Intent(view.getContext(), FeaturedProductActivity.class);
                 view.getContext().startActivity(intent);
             }
         });
