@@ -14,13 +14,6 @@
         <activity android:name=".activity.JEstateActivity" />
         <activity android:name=".activity.VindicationActivity" />
         <activity android:name=".activity.JECollectionActivity" />
-        <activity android:name=".VendorsProducts">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".activity.FeaturedProductActivity" />
         <activity
             android:name=".activity.ProductActivity"
