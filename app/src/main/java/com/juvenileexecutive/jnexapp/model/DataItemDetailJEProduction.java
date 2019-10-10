@@ -4,7 +4,7 @@ import com.juvenileexecutive.jnexapp.R;
 
 import java.util.ArrayList;
 
-public class DataItemDetail {
+public class DataItemDetailJEProduction {
 
     public static ArrayList<ItemDetailModel> generateData() {
         ArrayList<ItemDetailModel> detailItems = new ArrayList<>();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.TechnolojeActivity">
+    tools:context=".activity.JECollectionActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/rubik_medium"
-                android:text="@string/technoloje"
+                android:text="@string/je_business_school"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -38,7 +38,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_item_technoloje"
+                android:id="@+id/rv_item_jebusinessschool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

@@ -20,7 +20,7 @@ import java.util.List;
 
 public class FeaturedProductActivity extends AppCompatActivity {
 
-    List<FeaturedProductModel> featuredProduct;
+   List<FeaturedProductModel> featuredProduct;
    RvFeaturedProduct adapter;
 
     @Override

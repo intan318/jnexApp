@@ -1,10 +1,10 @@
 package com.juvenileexecutive.jnexapp.activity;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
 
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.adapter.RvItemProductAdapter;
@@ -13,23 +13,22 @@ import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
 import java.util.List;
 
-public class JEProductionActivity extends AppCompatActivity {
+public class JEBusinessSchoolActivity extends AppCompatActivity {
 
-    RecyclerView recyclerViewJEPro;
+    RecyclerView recyclerViewJEBusinessSchool;
     List<ItemDetailModel> itemDetailModels;
     RvItemProductAdapter itemProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jeproduction);
+        setContentView(R.layout.activity_jebusiness_school);
 
-        recyclerViewJEPro = findViewById(R.id.rv_item_payment);
+        recyclerViewJEBusinessSchool = findViewById(R.id.rv_item_jebusinessschool);
         itemDetailModels = DataItemDetailJEProduction.generateData();
         itemProductAdapter = new RvItemProductAdapter(this, itemDetailModels);
-        recyclerViewJEPro.setLayoutManager(new GridLayoutManager(this,2));
-        recyclerViewJEPro.setAdapter(itemProductAdapter);
-
+        recyclerViewJEBusinessSchool.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerViewJEBusinessSchool.setAdapter(itemProductAdapter);
 
     }
 }

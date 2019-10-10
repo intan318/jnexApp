@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.juvenileexecutive.jnexapp.R;
-import com.juvenileexecutive.jnexapp.ProductActivity;
+import com.juvenileexecutive.jnexapp.activity.ProductActivity;
 import com.juvenileexecutive.jnexapp.home.model.ProductsModel;
 
 import java.util.List;

@@ -1,35 +1,33 @@
 package com.juvenileexecutive.jnexapp.activity;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Bundle;
+
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.adapter.RvItemProductAdapter;
-import com.juvenileexecutive.jnexapp.model.DataItemDetailJEProduction;
+import com.juvenileexecutive.jnexapp.model.DataItemDetailVindication;
 import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
 import java.util.List;
 
-public class JEProductionActivity extends AppCompatActivity {
+public class VindicationActivity extends AppCompatActivity {
 
-    RecyclerView recyclerViewJEPro;
+    RecyclerView recyclerViewVindication;
     List<ItemDetailModel> itemDetailModels;
     RvItemProductAdapter itemProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jeproduction);
+        setContentView(R.layout.activity_vindication);
 
-        recyclerViewJEPro = findViewById(R.id.rv_item_payment);
-        itemDetailModels = DataItemDetailJEProduction.generateData();
+        recyclerViewVindication = findViewById(R.id.rv_item_vindication);
+        itemDetailModels = DataItemDetailVindication.generateDataVindication();
         itemProductAdapter = new RvItemProductAdapter(this, itemDetailModels);
-        recyclerViewJEPro.setLayoutManager(new GridLayoutManager(this,2));
-        recyclerViewJEPro.setAdapter(itemProductAdapter);
-
-
+        recyclerViewVindication.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerViewVindication.setAdapter(itemProductAdapter);
     }
 }
