@@ -9,8 +9,8 @@ public class DataMember {
 
     public static ArrayList<MemberModel> generateDataMember() {
         ArrayList<MemberModel> memberModels = new ArrayList<>();
-        memberModels.add(new MemberModel("Name", "Age", R.drawable.background1));
-        memberModels.add(new MemberModel("Name", "Age", R.drawable.background2));
+        memberModels.add(new MemberModel("Venus Ragantara, 18 Tahun", "Jessica Training Center", R.drawable.member1));
+        memberModels.add(new MemberModel("Aryasa Ragantara, 15 Tahun ", "Jessica Training Center", R.drawable.member2));
         return memberModels;
     }
 }

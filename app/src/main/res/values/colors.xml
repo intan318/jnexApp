@@ -8,6 +8,7 @@
     <color name="gold">#87754f</color>
     <color name="grey">#b7b7b7</color>
 
-
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override = "true">#87754f</color>
+    <color name="mtrl_textinput_disabled_color" tools:override = "true">#99000000</color>
 
 </resources>

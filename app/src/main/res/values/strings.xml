@@ -43,4 +43,7 @@
     <string name="technoloje">Technoloje</string>
     <string name="products">Products</string>
     <string name="register">REGISTER</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
 </resources>

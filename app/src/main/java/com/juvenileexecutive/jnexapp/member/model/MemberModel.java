@@ -2,15 +2,15 @@ package com.juvenileexecutive.jnexapp.member.model;
 
 public class MemberModel {
     String nameMember;
-    String ageMember;
+    String jenisMember;
     int imageMember;
 
     public MemberModel() {
     }
 
-    public MemberModel(String nameMember, String ageMember, int imageMember) {
+    public MemberModel(String nameMember, String jenisMember, int imageMember) {
         this.nameMember = nameMember;
-        this.ageMember = ageMember;
+        this.jenisMember = jenisMember;
         this.imageMember = imageMember;
     }
 
@@ -22,12 +22,12 @@ public class MemberModel {
         this.nameMember = nameMember;
     }
 
-    public String getAgeMember() {
-        return ageMember;
+    public String getJenisMember() {
+        return jenisMember;
     }
 
-    public void setAgeMember(String ageMember) {
-        this.ageMember = ageMember;
+    public void setJenisMember(String jenisMember) {
+        this.jenisMember = jenisMember;
     }
 
     public int getImageMember() {

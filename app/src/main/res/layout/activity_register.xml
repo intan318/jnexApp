@@ -20,6 +20,31 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_marginTop="32dp"
+        android:id="@+id/txt_input_fullname_regis"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Fullname"
+        android:textColorHint="@color/gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:boxStrokeColor="@color/gold"
+        app:hintTextAppearance="@style/HintText">
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/gold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:fontFamily="@font/rubik_light"
+            android:padding="8dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
         android:id="@+id/txt_input_email_regis"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
@@ -30,8 +55,9 @@
         android:textColorHint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
-        app:boxStrokeColor="@color/gold">
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_fullname_regis"
+        app:boxStrokeColor="@color/gold"
+        app:hintTextAppearance="@style/HintText">
         <com.google.android.material.textfield.TextInputEditText
             android:textColor="@color/gold"
             android:layout_width="match_parent"
@@ -57,7 +83,8 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_input_email_regis"
         app:boxStrokeColor="@color/gold"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/gold">
+        app:passwordToggleTint="@color/gold"
+        app:hintTextAppearance="@style/HintText">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,8 +95,42 @@
             android:textColorHint="@color/gold"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+<RadioGroup
+    android:id="@+id/radio_group_gender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/txt_input_password_regis"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp">
 
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/gold"
+        android:textSize="18sp"
+        android:fontFamily="@font/rubik_medium"/>
 
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/female"
+        android:textColor="@color/gold"
+        android:fontFamily="@font/rubik_regular"
+        android:textSize="16sp"
+        android:buttonTint="@color/gold"/>
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/male"
+        android:textColor="@color/gold"
+        android:fontFamily="@font/rubik_regular"
+        android:textSize="16sp"
+        android:buttonTint="@color/gold"/>
+</RadioGroup>
     <Button
         android:id="@+id/btn_regis"
         android:layout_marginStart="32dp"
@@ -82,28 +143,10 @@
         android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
         android:textSize="20sp"
         app:cornerRadius="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt_input_password_regis"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_gender"
+        tools:layout_editor_absoluteX="0dp"
+        android:fontFamily="@font/rubik_medium"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_regis"
-        android:id="@+id/name_text_input"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="492dp"
-        >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_marginTop="10dp"
-            android:id="@+id/name_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="apem manis" />
-    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,9 @@ public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHo
         Glide.with(context)
                 .load(memberList.get(position).getImageMember())
                 .into(holder.imageMember);
+        holder.namaMember.setText(memberList.get(position).getNameMember());
+        holder.jenisMember.setText(memberList.get(position).getJenisMember());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,11 +58,12 @@ public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageMember;
-
+        TextView namaMember, jenisMember;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageMember = itemView.findViewById(R.id.iv_member);
-
+            imageMember = itemView.findViewById(R.id.media_image);
+            namaMember = itemView.findViewById(R.id.txt_nama_member);
+            jenisMember = itemView.findViewById(R.id.jenis_member);
 
         }
     }
