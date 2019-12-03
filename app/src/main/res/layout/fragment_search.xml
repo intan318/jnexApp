@@ -36,6 +36,15 @@
         app:queryHint="Search">
     </androidx.appcompat.widget.SearchView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
     <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/CardView.Light"
@@ -43,7 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginEnd="8dp"
+        android:id="@+id/cv_search_jessica">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -103,7 +113,7 @@
                 android:id="@+id/media_image2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 app:layout_constraintDimensionRatio="H,16:9"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +137,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="JENIVER BUSINESS CENTER"
+                android:text="TECHNOLOJE"
                 android:fontFamily="@font/rubik_medium" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

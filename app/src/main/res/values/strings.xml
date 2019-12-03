@@ -46,4 +46,6 @@
     <string name="gender">Gender</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
+    <string name="jv_world">JV World</string>
+    <string name="juvenna_world">Juvenna World</string>
 </resources>

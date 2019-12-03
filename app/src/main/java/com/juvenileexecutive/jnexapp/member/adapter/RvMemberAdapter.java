@@ -1,6 +1,7 @@
 package com.juvenileexecutive.jnexapp.member.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.juvenileexecutive.jnexapp.DetailWebViewJuvenna;
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.activity.DetailActivity;
+import com.juvenileexecutive.jnexapp.member.data.DataMember;
 import com.juvenileexecutive.jnexapp.member.model.MemberModel;
+import com.juvenileexecutive.jnexapp.model.ItemDetailModel;
 
 import java.util.List;
 
@@ -34,18 +39,25 @@ public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Glide.with(context)
                 .load(memberList.get(position).getImageMember())
-                .into(holder.imageMember);
-        holder.namaMember.setText(memberList.get(position).getNameMember());
-        holder.jenisMember.setText(memberList.get(position).getJenisMember());
+                .into(holder.imageJuvenna);
+        holder.namaProdukJuvenna.setText(memberList.get(position).getNameMember());
+       // holder.jenisMember.setText(memberList.get(position).getJenisMember());
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Item clicked", Toast.LENGTH_SHORT).show();
+
+                MemberModel dataMember = memberList.get(position);
+
+                Intent i = new Intent(context, DetailWebViewJuvenna.class);
+                i.putExtra("namamember", dataMember.getNameMember());
+                i.putExtra("imgmember", dataMember.getImageMember());
+                i.putExtra("urlmember", dataMember.getJenisMember());
+                context.startActivity(i);
             }
         });
 
@@ -57,13 +69,13 @@ public class RvMemberAdapter extends RecyclerView.Adapter<RvMemberAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageMember;
-        TextView namaMember, jenisMember;
+        ImageView imageJuvenna;
+        TextView namaProdukJuvenna;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageMember = itemView.findViewById(R.id.media_image);
-            namaMember = itemView.findViewById(R.id.txt_nama_member);
-            jenisMember = itemView.findViewById(R.id.jenis_member);
+            imageJuvenna = itemView.findViewById(R.id.media_image_juvenna);
+            namaProdukJuvenna = itemView.findViewById(R.id.txt_title_juvenna);
+          //  jenisMember = itemView.findViewById(R.id.jenis_member);
 
         }
     }

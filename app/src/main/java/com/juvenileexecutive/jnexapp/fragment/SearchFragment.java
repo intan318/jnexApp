@@ -2,20 +2,21 @@ package com.juvenileexecutive.jnexapp.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.WebviewJessica;
 
 import technolifestyle.com.imageslider.FlipperLayout;
-import technolifestyle.com.imageslider.FlipperView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,12 +25,13 @@ public class SearchFragment extends Fragment {
 
     FlipperLayout flipperLayout;
     Context context;
-
+    CardView cvSearchJessica,cvSearchTechnoloJE;
     private View SearchView;
 
-//    public SearchFragment() {
-//        // Required empty public constructor
-//    }
+
+    public SearchFragment() {
+        // Required empty public constructor
+    }
 
 
     @Override
@@ -40,43 +42,20 @@ public class SearchFragment extends Fragment {
         return SearchView;
     }
 
-//    mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
-//        @Override
-//        public void onSearchTextChanged(String oldQuery, final String newQuery) {
-//
-//            //get suggestions based on newQuery
-//
-//            //pass them on to the search view
-//            mSearchView.swapSuggestions(newSuggestions);
-//        }
-//    });
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-//        flipperLayout = view.findViewById(R.id.flipper_search);
-//        setLayoutSlider();
+        cvSearchJessica = view.findViewById(R.id.cv_search_jessica);
+        cvSearchJessica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), WebviewJessica.class);
+                getContext().startActivity(intent);
+            }
+        });
     }
 
-//    private void setLayoutSlider() {
-//        Integer[] img = new Integer[]{
-//                R.drawable.slider01, R.drawable.slider02, R.drawable.slider3
-//        };
-//
-//        for (int i = 0; i < 3; i++) {
-//            FlipperView view = new FlipperView(getContext());
-//            view.setImageDrawable(img[i])
-//                    .setImageScaleType(ImageView.ScaleType.CENTER_CROP);
-//
-//            flipperLayout.addFlipperView(view);
-//            view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
-//                @Override
-//                public void onFlipperClick(FlipperView flipperView) {
-//
-//                }
-//            });
-//        }
-//    }
+
 }
