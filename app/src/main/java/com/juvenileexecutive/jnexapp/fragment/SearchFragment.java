@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.WebViewJuvenna;
 import com.juvenileexecutive.jnexapp.WebviewJessica;
 
 import technolifestyle.com.imageslider.FlipperLayout;
@@ -25,7 +26,7 @@ public class SearchFragment extends Fragment {
 
     FlipperLayout flipperLayout;
     Context context;
-    CardView cvSearchJessica,cvSearchTechnoloJE;
+    CardView cvSearchJessica,cvSearchJuvenna;
     private View SearchView;
 
 
@@ -55,6 +56,15 @@ public class SearchFragment extends Fragment {
                 getContext().startActivity(intent);
             }
         });
+        cvSearchJuvenna = view.findViewById(R.id.cv_search_juvenna);
+        cvSearchJuvenna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentjuvenna = new Intent(getContext(), WebViewJuvenna.class);
+                getContext().startActivity(intentjuvenna);
+            }
+        });
+
     }
 
 
