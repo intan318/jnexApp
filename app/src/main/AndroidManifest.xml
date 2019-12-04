@@ -26,6 +26,9 @@
             android:name=".activity.JEProductionActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".TechnolojeActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.PaymentActivity"
             android:screenOrientation="portrait" />
         <activity

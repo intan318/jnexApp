@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.TechnolojeActivity;
 import com.juvenileexecutive.jnexapp.adapter.RvSubCategoriesAdapter;
 import com.juvenileexecutive.jnexapp.model.DataSubCategory;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
@@ -23,7 +24,7 @@ public class SubCategoryActivity extends AppCompatActivity {
     RvSubCategoriesAdapter subCategoriesAdapter;
 
     CardView cvCategoryJepro;
-
+    CardView cvCategoryTechnoloJE;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,5 +45,13 @@ public class SubCategoryActivity extends AppCompatActivity {
             }
         });
 
+        cvCategoryTechnoloJE = findViewById(R.id.cv_category_technoloje);
+        cvCategoryTechnoloJE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intenttechnoloje = new Intent(SubCategoryActivity.this, TechnolojeActivity.class);
+                startActivity(intenttechnoloje);
+            }
+        });
     }
 }
