@@ -52,7 +52,7 @@ public class RvItemCartAdapter extends RecyclerView.Adapter<RvItemCartAdapter.Vi
 
         //holder.itemName.setText(itemCarts.get(position).getItemName());
         Glide.with(context)
-                .load(i.getStringExtra("imgitem"))
+                .load(i.getIntExtra("imgitem",0))
                 .into(holder.imgItem);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

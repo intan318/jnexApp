@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imgItemDetail"
+        android:id="@+id/imgItemDetailJEPRO"
         android:layout_width="match_parent"
         android:layout_height="224dp"
         android:scaleType="fitXY"
@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgItemDetail"
+        android:layout_below="@+id/imgItemDetailJEPRO"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="12dp"

@@ -74,7 +74,7 @@ public class RvItemProductAdapter extends RecyclerView.Adapter<RvItemProductAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             namaItem = itemView.findViewById(R.id.txtNamaItem);
-//            descItem = itemView.findViewById(R.id.txtDescItemDetail);
+           descItem = itemView.findViewById(R.id.txtDescItemDetail);
             imgItem = itemView.findViewById(R.id.imgItemJePro);
         }
     }

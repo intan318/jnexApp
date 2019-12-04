@@ -29,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         Intent i = getIntent();
         final String detNamaItem = i.getStringExtra("namaitem");
         final String detDescItem = i.getStringExtra("descitem");
-        final String detImgItem = i.getStringExtra("imgitem");
+        final int detImgItem = i.getIntExtra("imgitem",0);
 
         detailNamaItem.setText(detNamaItem);
         detailDescItem.setText(detDescItem);
@@ -54,7 +54,7 @@ public class DetailActivity extends AppCompatActivity {
     private void initData() {
         detailNamaItem = findViewById(R.id.txtNamaItemDetail);
         detailDescItem = findViewById(R.id.txtDescItemDetail);
-        detailImgItem = findViewById(R.id.imgItemDetail);
+        detailImgItem = findViewById(R.id.imgItemDetailJEPRO);
         detailButtonRequest = findViewById(R.id.btnItemRequest);
     }
 }
