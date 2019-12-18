@@ -34,6 +34,7 @@
         app:boxStrokeColor="@color/gold"
         app:hintTextAppearance="@style/HintText">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regis_edit_fullname"
             android:textColor="@color/gold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,6 +60,7 @@
         app:boxStrokeColor="@color/gold"
         app:hintTextAppearance="@style/HintText">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regis_edit_email"
             android:textColor="@color/gold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,6 +88,7 @@
         app:passwordToggleTint="@color/gold"
         app:hintTextAppearance="@style/HintText">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regis_edit_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

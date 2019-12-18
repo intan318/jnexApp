@@ -17,7 +17,7 @@ public class DetailWebViewJuvenna extends AppCompatActivity {
         Intent i = getIntent();
         final String deturlMember = i.getStringExtra("urlmember");
         detWebView.setWebViewClient(new WebViewClient());
-         detWebView.loadUrl(deturlMember);
+        detWebView.loadUrl(deturlMember);
 
     }
 }

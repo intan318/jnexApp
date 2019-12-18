@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
 import com.juvenileexecutive.jnexapp.TechnolojeActivity;
+import com.juvenileexecutive.jnexapp.WbviewJEState;
+import com.juvenileexecutive.jnexapp.WebviewJECollection;
+import com.juvenileexecutive.jnexapp.WebviewVindication;
 import com.juvenileexecutive.jnexapp.adapter.RvSubCategoriesAdapter;
 import com.juvenileexecutive.jnexapp.model.DataSubCategory;
 import com.juvenileexecutive.jnexapp.model.SubCategoryModel;
@@ -24,7 +27,7 @@ public class SubCategoryActivity extends AppCompatActivity {
     RvSubCategoriesAdapter subCategoriesAdapter;
 
     CardView cvCategoryJepro;
-    CardView cvCategoryTechnoloJE;
+    CardView cvCategoryTechnoloJE,cvCategoryVindication,cvCategoryJestate,cvCategoryCollection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,33 @@ public class SubCategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intenttechnoloje = new Intent(SubCategoryActivity.this, TechnolojeActivity.class);
                 startActivity(intenttechnoloje);
+            }
+        });
+
+        cvCategoryCollection = findViewById(R.id.cv_category_jecollection);
+        cvCategoryCollection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentcollection = new Intent(SubCategoryActivity.this, WebviewJECollection.class);
+                startActivity(intentcollection);
+            }
+        });
+
+        cvCategoryVindication = findViewById(R.id.cv_category_vindication);
+        cvCategoryVindication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentvindication= new Intent(SubCategoryActivity.this, WebviewVindication.class);
+                startActivity(intentvindication);
+            }
+        });
+
+        cvCategoryJestate = findViewById(R.id.cv_category_jestate);
+        cvCategoryJestate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentjestate= new Intent(SubCategoryActivity.this, WbviewJEState.class);
+                startActivity(intentjestate);
             }
         });
     }

@@ -43,13 +43,7 @@ public class RvProductsAdapter extends RecyclerView.Adapter<RvProductsAdapter.Vi
                 .into(holder.imageProduct);
         //  holder.txtProduct.setText(productsList.get(position).getProductTitle());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), FeaturedProductActivity.class);
-                view.getContext().startActivity(intent);
-            }
-        });
+
     }
 
     @Override
