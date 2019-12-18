@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.juvenileexecutive.jnexapp.R;
+import com.juvenileexecutive.jnexapp.WebviewExpansion;
 import com.juvenileexecutive.jnexapp.activity.SubCategoryActivity;
 import com.juvenileexecutive.jnexapp.category.adapter.RvCategoriesAdapter;
 import com.juvenileexecutive.jnexapp.category.model.CategoryModel;
@@ -31,6 +32,7 @@ public class CategoryFragment extends Fragment {
     private View CategoryView;
 
     CardView cardViewOneStopSolution;
+    CardView cvExpansion;
 
     @Nullable
     @Override
@@ -53,10 +55,19 @@ public class CategoryFragment extends Fragment {
         cardViewOneStopSolution.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent  intent = new Intent(getContext(), SubCategoryActivity.class);
-                getContext().startActivity(intent);
+                Intent  intentonestop = new Intent(getContext(), SubCategoryActivity.class);
+                getContext().startActivity(intentonestop);
             }
         });
+
+//        cvExpansion = view.findViewById(R.id.card_view_businessexp);
+//        cvExpansion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentexpansion = new Intent(getContext(), WebviewExpansion.class);
+//                getContext().startActivity(intentexpansion);
+//            }
+//        });
 
 
     }

@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".WebviewVindication"></activity>
+        <activity android:name=".WebviewExpansion"></activity>
+        <activity android:name=".WebviewVindication" />
         <activity android:name=".WbviewJEState" />
         <activity android:name=".WebviewJECollection" />
         <activity android:name=".WebViewJuvenna" />
